@@ -31,3 +31,18 @@ body {
     text-wrap: balance;
   }
 }
+
+.skill-button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #3182ce; /* Change this to your desired color */
+  color: white;
+  font-size: 0.875rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-button:hover {
+  transform: scale(1.1);
+}

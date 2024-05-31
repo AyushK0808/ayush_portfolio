@@ -1,113 +1,187 @@
 import Image from "next/image";
+import { Navbar } from "./components/ui/navbar";
+import { HeroHighlight, Highlight } from "./components/ui/hero";
+import { TypewriterEffectSmooth } from "./components/ui/typewriter";
+import {
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
+import { BentoGrid, BentoGridItem } from "./components/ui/bento-grid";
+import SectionHeading from "./components/ui/heading";
+import { LayoutGrid } from "./components/ui/layout-grid";
+
+const navItems = [
+  { name: "Home", link: "/",  }, 
+  { name: "About", link: "/about",  },
+  { name: "Services", link: "/services",  },
+  { name: "Contact", link: "/contact",  },
+];
+
+const typewriterWords = [
+  { text: "Machine Learning & Web Development" },
+];
+
+const skills = {
+  frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "Framer", "Bootstrap", "Tailwind CSS", "ReactJS"],
+  backend: ["NextJS", "MongoDB", "mySQL", "Postgres", "Django", "Express JS", "Flask", "Node JS", "Go", "Rust", "Docker", "Postman API", "Prisma"],
+  machineLearning: ["TensorFlow", "Keras", "scikitlearn", "OpenCV", "numpy", "pandas", "pytorch"],
+  programmingLanguages: ["C", "C++", "Java", "Python", "R"],
+  others: ["Canva", "Figma", "Flutter", "React Native", "Arduino", "Linux"],
+};
+
+const skillColors = {
+  HTML: "#E34F26",
+  CSS: "#1572B6",
+  JavaScript: "#F7DF1E",
+  TypeScript: "#3178C6",
+  Framer: "#0055FF",
+  Bootstrap: "#7952B3",
+  "Tailwind CSS": "#38B2AC",
+  ReactJS: "#61DAFB",
+  NextJS: "#000000",
+  MongoDB: "#47A248",
+  mySQL: "#4479A1",
+  Postgres: "#336791",
+  Django: "#092E20",
+  "Express JS": "#000000",
+  Flask: "#000000",
+  "Node JS": "#339933",
+  Go: "#00ADD8",
+  Rust: "#DEA584",
+  Docker: "#2496ED",
+  "Postman API": "#FF6C37",
+  Prisma: "#0C344B",
+  TensorFlow: "#FF6F00",
+  Keras: "#D00000",
+  scikitlearn: "#F7931E",
+  OpenCV: "#5C3EE8",
+  numpy: "#013243",
+  pandas: "#150458",
+  pytorch: "#EE4C2C",
+  C: "#A8B9CC",
+  "C++": "#00599C",
+  Java: "#007396",
+  Python: "#3776AB",
+  R: "#276DC3",
+  Canva: "#00C4CC",
+  Figma: "#F24E1E",
+  Flutter: "#02569B",
+  "React Native": "#61DAFB",
+  Arduino: "#00979D",
+  Linux: "#FCC624",
+};
+
+const createSkillButtons = (skillsArray) => {
+  return skillsArray.map((skill) => {
+    const backgroundColor = skillColors[skill] || "#3182ce"; // Default color if not found in mapping
+    return (
+      <span
+        key={skill}
+        className="skill-button"
+        style={{ backgroundColor }}
+      >
+        {skill}
+      </span>
+    );
+  });
+};
+
+const items = [
+  
+  {
+    title: "Backend Development",
+    description: createSkillButtons(skills.backend),
+    header: "",
+    className: "md:col-span-2",
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Frontend Development",
+    description: createSkillButtons(skills.frontend),
+    header: " ",
+    className: "md:col-span-1",
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Machine Learning",
+    description: createSkillButtons(skills.machineLearning),
+    header: "",
+    className: "md:col-span-1",
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Programming Languages",
+    description: createSkillButtons(skills.programmingLanguages),
+    header: "",
+    className: "md:col-span-1",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Others",
+    description: createSkillButtons(skills.others),
+    header: "",
+    className: "md:col-span-1",
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+];
+
+const cards = [
+  {
+    id: 1,
+    content: <p>This is the content for card 1.</p>,
+    className: "bg-red-500",
+    thumbnail: "/white.png",
+  },
+  {
+    id: 2,
+    content: <p>This is the content for card 2.</p>,
+    className: "bg-green-500",
+    thumbnail: "/white.png",
+  },
+  {
+    id: 3,
+    content: <p>This is the content for card 3.</p>,
+    className: "bg-blue-500",
+    thumbnail: "/white.png",
+  },
+  // Add more cards as needed
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <div>
+      <Navbar navItems={navItems} className="" />
+      <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
+        <h1 className="text-6xl font-bold text-center text-black dark:text-white">
+          Hello There 
+        </h1>
+        <br/>
+        <p className="text-2xl text-center text-gray-700 dark:text-gray-300">
+          I am <Highlight>Ayush Kumar</Highlight> 
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <TypewriterEffectSmooth
+          words={typewriterWords}
+          className="mb-8 bg-transparent text-center"
+          cursorClassName="bg-blue-600"
         />
-      </div>
+      </HeroHighlight>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <SectionHeading title="My Skills" />
+      <BentoGrid className='max-w-5xl mx-auto md:auto-rows-[25rem]'>
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={item.className}
+            icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
+      <LayoutGrid cards={cards} />
+    </div>
   );
 }
