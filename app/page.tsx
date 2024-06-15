@@ -16,6 +16,7 @@ import Link from "next/link";
 import CardList from "./components/ui/card-list";
 import Education from "./components/ui/education";
 import Experience from "./components/ui/experience";
+import MainNavbar from "./components/ui/resp-nav";
 
 const navItems = [
   { name: "Home", link: "/",  }, 
@@ -159,7 +160,8 @@ const cards = [
 export default function Home() {
   return (
     <div>
-      <Navbar navItems={navItems} className="hidden sm:flex"/>
+      <MainNavbar/>
+      <Navbar navItems={navItems} className="hidden md:flex"/>
       <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="text-6xl font-bold text-center text-black dark:text-white">
           Hello There 
