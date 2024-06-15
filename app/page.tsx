@@ -11,12 +11,19 @@ import {
 import { BentoGrid, BentoGridItem } from "./components/ui/bento-grid";
 import SectionHeading from "./components/ui/heading";
 import { LayoutGrid } from "./components/ui/layout-grid";
+import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
+import Link from "next/link";
+import CardList from "./components/ui/card-list";
+import Education from "./components/ui/education";
+import Experience from "./components/ui/experience";
 
 const navItems = [
   { name: "Home", link: "/",  }, 
-  { name: "About", link: "/about",  },
-  { name: "Services", link: "/services",  },
-  { name: "Contact", link: "/contact",  },
+  { name: "My Skills", link: "/",  },
+  { name: "My Projects", link: "/",  },
+  { name: "Experience", link: "/",  },
+  { name: "Education", link: "/",  },
+  { name: "Get in touch", link: "/",  }
 ];
 
 const typewriterWords = [
@@ -31,7 +38,7 @@ const skills = {
   others: ["Canva", "Figma", "Flutter", "React Native", "Arduino", "Linux"],
 };
 
-const skillColors = {
+const skillColors: { [key: string]: string } = {
   HTML: "#E34F26",
   CSS: "#1572B6",
   JavaScript: "#F7DF1E",
@@ -73,7 +80,7 @@ const skillColors = {
   Linux: "#FCC624",
 };
 
-const createSkillButtons = (skillsArray) => {
+const createSkillButtons = (skillsArray: string[]) => {
   return skillsArray.map((skill) => {
     const backgroundColor = skillColors[skill] || "#3182ce"; // Default color if not found in mapping
     return (
@@ -152,7 +159,7 @@ const cards = [
 export default function Home() {
   return (
     <div>
-      <Navbar navItems={navItems} className="" />
+      <Navbar navItems={navItems} className="hidden sm:flex"/>
       <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="text-6xl font-bold text-center text-black dark:text-white">
           Hello There 
@@ -167,7 +174,7 @@ export default function Home() {
           cursorClassName="bg-blue-600"
         />
       </HeroHighlight>
-
+      <br/>
       <SectionHeading title="My Skills" />
       <BentoGrid className='max-w-5xl mx-auto md:auto-rows-[25rem]'>
         {items.map((item, i) => (
@@ -181,7 +188,16 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
-      <LayoutGrid cards={cards} />
+      {/* <LayoutGrid cards={cards} /> */}
+      <br/>
+      <SectionHeading title="My Projects" />
+      <CardList/>
+      <br/>
+      <SectionHeading title="Experience" />
+      <Experience/>
+      <SectionHeading title="Education" />
+      <Education/>
+      <SectionHeading title="Get in Touch" />
     </div>
   );
 }
