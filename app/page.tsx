@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { Navbar } from "./components/ui/navbar";
@@ -209,10 +212,8 @@ export default function Home() {
       <SectionHeading title="Get in Touch" />
       {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
       <div className="max-w-full mx-auto mb-8">
-          
-                <WorldForm/>
-              
-        </div>
+        <WorldForm/>
+      </div>
         <Footer/>
     </div>
   );
