@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from 'framer-motion';
 import { Navbar } from "./components/ui/navbar";
 import { HeroHighlight, Highlight } from "./components/ui/hero";
 import { TypewriterEffectSmooth } from "./components/ui/typewriter";
@@ -17,6 +18,10 @@ import CardList from "./components/ui/card-list";
 import Education from "./components/ui/education";
 import Experience from "./components/ui/experience";
 import MainNavbar from "./components/ui/resp-nav";
+import { World } from "./components/ui/globe";
+import ContactForm from "./components/ui/form";
+import WorldForm from "./components/ui/globe-form";
+import Footer from "./components/ui/footer";
 
 const navItems = [
   { name: "Home", link: "/",  }, 
@@ -157,6 +162,8 @@ const cards = [
   // Add more cards as needed
 ];
 
+ // Purple shades
+
 export default function Home() {
   return (
     <div>
@@ -200,6 +207,13 @@ export default function Home() {
       <SectionHeading title="Education" />
       <Education/>
       <SectionHeading title="Get in Touch" />
+      {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
+      <div className="max-w-full mx-auto mb-8">
+          
+                <WorldForm/>
+              
+        </div>
+        <Footer/>
     </div>
   );
 }
