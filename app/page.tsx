@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import { Navbar } from "./components/ui/navbar";
 import { HeroHighlight, Highlight } from "./components/ui/hero";
 import { TypewriterEffectSmooth } from "./components/ui/typewriter";
 import {
@@ -20,19 +20,23 @@ import Link from "next/link";
 import CardList from "./components/ui/card-list";
 import Education from "./components/ui/education";
 import Experience from "./components/ui/experience";
-import MainNavbar from "./components/ui/resp-nav";
-import { World } from "./components/ui/globe";
-import ContactForm from "./components/ui/form";
-import WorldForm from "./components/ui/globe-form";
 import Footer from "./components/ui/footer";
+import MainNavbar from './components/ui/resp-nav';
+import { Navbar } from './components/ui/navbar';
+
+// Dynamic imports
+// const MainNavbar = dynamic(() => import('./components/ui/resp-nav'), { ssr: false });
+// const Navbar = dynamic(() => import(''), { ssr: false });
+const WorldForm = dynamic(() => import('./components/ui/globe-form'), { ssr: false });
+// const World = dynamic(() => import('./components/ui/globe'), { ssr: false });
 
 const navItems = [
-  { name: "Home", link: "/",  }, 
-  { name: "My Skills", link: "/",  },
-  { name: "My Projects", link: "/",  },
-  { name: "Experience", link: "/",  },
-  { name: "Education", link: "/",  },
-  { name: "Get in touch", link: "/",  }
+  { name: "Home", link: "/" }, 
+  { name: "My Skills", link: "/" },
+  { name: "My Projects", link: "/" },
+  { name: "Experience", link: "/" },
+  { name: "Education", link: "/" },
+  { name: "Get in touch", link: "/" }
 ];
 
 const typewriterWords = [
@@ -168,7 +172,9 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+    }
   }, []);
 
   if (!isClient) {
