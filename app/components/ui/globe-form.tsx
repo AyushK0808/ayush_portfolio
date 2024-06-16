@@ -1,4 +1,4 @@
-// components/WorldWithContactForm.tsx
+"use client";
 import React, { createContext } from 'react';
 import { motion } from 'framer-motion';
 import { WebGLRendererConfig , World} from './globe';
