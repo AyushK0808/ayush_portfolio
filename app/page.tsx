@@ -105,7 +105,6 @@ const createSkillButtons = (skillsArray: string[]) => {
 };
 
 const items = [
-  
   {
     title: "Backend Development",
     description: createSkillButtons(skills.backend),
@@ -165,20 +164,28 @@ const cards = [
   // Add more cards as needed
 ];
 
- // Purple shades
-
 export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing on the server
+  }
+
   return (
     <div>
-      <MainNavbar/>
-      <Navbar navItems={navItems} className="hidden md:flex"/>
+      <MainNavbar />
+      <Navbar navItems={navItems} className="hidden md:flex" />
       <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="text-6xl font-bold text-center text-black dark:text-white">
-          Hello There 
+          Hello There
         </h1>
-        <br/>
+        <br />
         <p className="text-2xl text-center text-gray-700 dark:text-gray-300">
-          I am <Highlight>Ayush Kumar</Highlight> 
+          I am <Highlight>Ayush Kumar</Highlight>
         </p>
         <TypewriterEffectSmooth
           words={typewriterWords}
@@ -186,9 +193,9 @@ export default function Home() {
           cursorClassName="bg-blue-600"
         />
       </HeroHighlight>
-      <br/>
+      <br />
       <SectionHeading title="My Skills" />
-      <BentoGrid className='max-w-5xl mx-auto md:auto-rows-[25rem]'>
+      <BentoGrid className="max-w-5xl mx-auto md:auto-rows-[25rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -201,20 +208,20 @@ export default function Home() {
         ))}
       </BentoGrid>
       {/* <LayoutGrid cards={cards} /> */}
-      <br/>
+      <br />
       <SectionHeading title="My Projects" />
-      <CardList/>
-      <br/>
+      <CardList />
+      <br />
       <SectionHeading title="Experience" />
-      <Experience/>
+      <Experience />
       <SectionHeading title="Education" />
-      <Education/>
+      <Education />
       <SectionHeading title="Get in Touch" />
       {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
       <div className="max-w-full mx-auto mb-8">
-        <WorldForm/>
+        <WorldForm />
       </div>
-        <Footer/>
+      <Footer />
     </div>
   );
 }
