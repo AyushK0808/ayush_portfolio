@@ -85,6 +85,7 @@ const MainNavbar = () => {
           </div>
           <div className="flex flex-col space-y-4">
             <a href="#home" className='hover:font-bold'>Home</a>
+            <a href="#aboutme" className='hover:font-bold'>About Me</a>
             <a href="#skills" className='hover:font-bold'>My Skills</a>
             <a href="#projects" className='hover:font-bold' >My Projects</a>
             <a href="#experience" className='hover:font-bold'>Experience</a>

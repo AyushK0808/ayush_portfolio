@@ -23,6 +23,7 @@ import Experience from "./components/ui/experience";
 import Footer from "./components/ui/footer";
 import MainNavbar from './components/ui/resp-nav';
 import { Navbar } from './components/ui/navbar';
+import Profile from './components/ui/profile';
 
 // Dynamic imports
 // const MainNavbar = dynamic(() => import('./components/ui/resp-nav'), { ssr: false });
@@ -31,12 +32,13 @@ const WorldForm = dynamic(() => import('./components/ui/globe-form'), { ssr: fal
 // const World = dynamic(() => import('./components/ui/globe'), { ssr: false });
 
 const navItems = [
-  { name: "Home", link: "/" }, 
-  { name: "My Skills", link: "/" },
-  { name: "My Projects", link: "/" },
-  { name: "Experience", link: "/" },
-  { name: "Education", link: "/" },
-  { name: "Get in touch", link: "/" }
+  { name: "Home", link: "#home" },
+  { name: "About Me", link: "#aboutme" },
+  { name: "My Skills", link: "#skills" },
+  { name: "My Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
+  { name: "Education", link: "#education" },
+  { name: "Get in touch", link: "#contactme" }
 ];
 
 const typewriterWords = [
@@ -146,27 +148,7 @@ const items = [
   },
 ];
 
-const cards = [
-  {
-    id: 1,
-    content: <p>This is the content for card 1.</p>,
-    className: "bg-red-500",
-    thumbnail: "/white.png",
-  },
-  {
-    id: 2,
-    content: <p>This is the content for card 2.</p>,
-    className: "bg-green-500",
-    thumbnail: "/white.png",
-  },
-  {
-    id: 3,
-    content: <p>This is the content for card 3.</p>,
-    className: "bg-blue-500",
-    thumbnail: "/white.png",
-  },
-  // Add more cards as needed
-];
+
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -185,7 +167,8 @@ export default function Home() {
     <div>
       <MainNavbar />
       <Navbar navItems={navItems} className="hidden md:flex" />
-      <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
+      <div id='home'>
+        <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="text-6xl font-bold text-center text-black dark:text-white">
           Hello There
         </h1>
@@ -199,8 +182,15 @@ export default function Home() {
           cursorClassName="bg-blue-600"
         />
       </HeroHighlight>
+      </div>
+      
       <br />
-      <SectionHeading title="My Skills" />
+      <div id='aboutme'>
+        <SectionHeading title="About Me"/>
+      <Profile/>
+      </div>
+      <div id='skills'>
+        <SectionHeading title="My Skills" />
       <BentoGrid className="max-w-5xl mx-auto md:auto-rows-[25rem]">
         {items.map((item, i) => (
           <BentoGridItem
@@ -213,20 +203,32 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
+      </div>
+      
       {/* <LayoutGrid cards={cards} /> */}
       <br />
-      <SectionHeading title="My Projects" />
+      <div id='projects'>
+        <SectionHeading title="My Projects" />
       <CardList />
+      </div>
+      
       <br />
+      <div id='experience'>
       <SectionHeading title="Experience" />
       <Experience />
-      <SectionHeading title="Education" />
+      </div>
+      <div id ='education'>
+        <SectionHeading title="Education" />
       <Education />
-      <SectionHeading title="Get in Touch" />
+      </div>
+      <div id ='contactme'>
+         <SectionHeading title="Get in Touch" />
       {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
       <div className="max-w-full mx-auto mb-8">
         <WorldForm />
       </div>
+      </div>
+     
       <Footer />
     </div>
   );
