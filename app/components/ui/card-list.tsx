@@ -42,7 +42,7 @@ const Card = ({ content }: { content: CardContent }) => {
       <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[25rem] h-auto rounded-xl p-6 border m-auto">
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white"
+          className="text-xl font-bold text-white"
         >
           {content.title}
         </CardItem>

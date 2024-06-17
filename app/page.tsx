@@ -169,11 +169,11 @@ export default function Home() {
       <Navbar navItems={navItems} className="hidden md:flex" />
       <div id='home'>
         <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
-        <h1 className="text-6xl font-bold text-center text-black dark:text-white">
+        <h1 className="text-6xl font-bold text-center text-white">
           Hello There
         </h1>
         <br />
-        <p className="text-2xl text-center text-gray-700 dark:text-gray-300">
+        <p className="text-2xl text-center text-gray-300">
           I am <Highlight>Ayush Kumar</Highlight>
         </p>
         <TypewriterEffectSmooth
