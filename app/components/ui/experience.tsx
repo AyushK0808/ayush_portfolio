@@ -10,11 +10,10 @@ interface DetailsProps {
   institute: string;
   from: string;
   to: string;
-  grade: string;
   details: string;
 }
 
-const Details: React.FC<DetailsProps> = ({ std, institute, from, to, grade, details }) => {
+const Details: React.FC<DetailsProps> = ({ std, institute, from, to, details }) => {
   const ref= useRef(null);
   return (
     <li ref={ref} className='my-8 first: mt-0 last: mb-0 w-[60%] mx-auto flex flex-col items-center justify-betweeen'>
@@ -26,7 +25,7 @@ const Details: React.FC<DetailsProps> = ({ std, institute, from, to, grade, deta
       >
         <h3 className='capitalize font-bold text-2xl'>{std} : {institute}</h3>
         <span className='capitalize font-medium'>
-          {from} - {to} | Grade: {grade}
+          {from} - {to}
         </span>
         <p className=' w-full font-extralight'>{details}</p>
         <br/>
@@ -35,30 +34,37 @@ const Details: React.FC<DetailsProps> = ({ std, institute, from, to, grade, deta
   );
 };
 
-const educationData = [
+const empData = [
   {
-    std: 'Grade 10',
-    institute: 'Delhi Public School, Hyderabad',
-    from: '2008',
-    to: '2020',
-    grade: '95.8%',
-    details: 'Achieved top grades in all subjects, with a strong focus on Mathematics and Science.'
+    std: 'Algorithm Intern',
+    institute: 'Titan Smart Labs - Hyderabad',
+    from: 'June 2024',
+    to: 'Present',
+    details: 'Worked on data collection and preprocessing. Additionally, worked in the development of algorithms to classify sleep and stress on a product launched by the company commercially. '
   },
   {
-    std: 'Grade 12',
-    institute: 'Fiitjee Junior College, Narayanguda, Hyderabad',
-    from: '2020',
-    to: "2022",
-    grade: '96.6%',
-    details: 'Specialized in Science stream, with excellent performance in Physics, Chemistry, and Mathematics.'
+    std: 'Under Secretary General - Technology',
+    institute: 'VIT Model United Nations Society- Vellore',
+    from: 'January 2024',
+    to: "April 2024",
+    
+    details: 'As the Under Secretary General - Technology for VITMUN 24, I was incharge of handling the technical aspects of the conference such as making the website for the event. Additionally, I was an active member in the Registrations department which helped in making the event a grand success'
   },
   {
-    std: 'Bachelor of Technology (B.Tech in CSE)',
-    institute: 'Vellore Institute of Technology, Vellore, Tamil Nadu',
-    from: '2022',
-    to: '2026(expected)',
-    grade: '9.2 CGPA (upto 4th semester)',
-    details: 'Completed Bachelor of Technology in Computer Science with a focus on Software Development and Machine Learning.'
+    std: 'Core Committee Member',
+    institute: 'VInnovateIT -VIT Vellore',
+    from: 'May 2023',
+    to: '',
+    
+    details: 'Active member in both the technical domain(ML,Web,cc) and management.Assisted in promotion drives of apps such as MessIT with more than 10,000concurrent users Contributed to multiple projects involving Generative AI andfull stack development'
+  },
+  {
+    std: 'Software Lead',
+    institute: 'Team Ardra: VIT Vellore',
+    from: 'May 2023',
+    to: '',
+    
+    details: 'Actively helped in outreach activities and worked on machine learning tasks to automate drone functionalities.'
   }
 ];
 
@@ -76,16 +82,15 @@ const Experience: React.FC = () => {
         <motion.div 
          style={{scaleY: scrollYProgress}}
         
-        className='absolute left-9 top-0 w-[4px] h-full bg-white origin-top '/>
+        className='absolute left-9 top-0 w-[4px] h-full bg-gradient-to-b from-purple-200 to-purple-700 origin-top '/>
           <ul className='w-full flex flex-col items-start justify-between ml-4'>
-          {educationData.map((edu, index) => (
+          {empData.map((edu, index) => (
             <Details
               key={index}
               std={edu.std}
               institute={edu.institute}
               from={edu.from}
               to={edu.to}
-              grade={edu.grade}
               details={edu.details}
             />
           ))}

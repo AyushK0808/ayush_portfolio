@@ -7,26 +7,30 @@ type CardContent = {
   title: string;
   description: string;
   link: string;
+  imgsrc: string;
   buttonText: string;
 };
 
 const cardContents: CardContent[] = [
   {
-    title: "Make things float in air",
-    description: "Hover over this card to unleash the power of CSS perspective",
-    link: "https://twitter.com/mannupaaji",
-    buttonText: "Try now →",
+    title: "ISDC 2024 Winning Team Project",
+    description: "Assisted in making the software for the drone team that won ISDC 2024. Worked on the object detection via images taken by the onboard the drone using YOLO object detection model. Also worked on a path planning algorithm(A* search algorithm) which gave a path which avoided allobstacles in the image while at the same time passing all the waypoints",
+    imgsrc:"/obj_dec.png",
+    link: "https://github.com/TeamArdra/isdc-2024",
+    buttonText: "Check it Out ->",
   },
   {
-    title: "Discover the power of Next.js",
-    description: "Next.js gives you the best developer experience with all the features you need for production.",
-    link: "https://nextjs.org",
-    buttonText: "Learn more →",
+    title: "TuneCraft",
+    description: "Made a model which gave song lyrics similar to how anartist would write. Used Genius API to prepare a dataset of the songs of the artist and trained it using LSTM to generate the lyrics of the song.",
+    imgsrc: "/tunecraft.png",
+    link: "https://fishtank-vinnovateit.vercel.app/",
+    buttonText: "Check it out →",
   },
   {
-    title: "Tailwind CSS for Styling",
-    description: "Rapidly build modern websites without ever leaving your HTML.",
-    link: "https://tailwindcss.com",
+    title: "Schedule Generator for Women coming back to work",
+    description: "Worked in thedevelopment of an app which helped women get back to work by generating a set of personalized tasks using Google's Gemini API. Worked on the frontend using NextJS and integrating the Gemini API on to the site",
+    imgsrc: "/maafia.png",
+    link: "https://github.com/AyushK0808/MAA-FIA",
     buttonText: "Explore →",
   },
   // Add more card contents as needed
@@ -51,7 +55,7 @@ const Card = ({ content }: { content: CardContent }) => {
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src="/white.png"
+            src={content.imgsrc}
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -68,13 +72,13 @@ const Card = ({ content }: { content: CardContent }) => {
           >
             {content.buttonText}
           </CardItem>
-          <CardItem
+          {/* <CardItem
             translateZ={20}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
             Sign up
-          </CardItem>
+          </CardItem> */}
         </div>
       </CardBody>
     </CardContainer>

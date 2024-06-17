@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { FaGithub, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaTwitter, FaEnvelope, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
@@ -10,36 +10,32 @@ const Footer: React.FC = () => {
         {/* Social Icons */}
         <div className="flex space-x-4">
           <a
-            href="https://github.com"
+            href="https://github.com/AyushK0808"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition-colors"
-            aria-label="GitHub"
+            className="hover:text-blue-800 transition-colors"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_ayush.0808?igsh=MXZuN2x5dWg1OXF3Ng=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-pink-500 transition-colors"
-            aria-label="Instagram"
+            className="hover:text-pink-500 transition-colors"
           >
             <FaInstagram size={24} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/ayush-kumar-061a58251/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition-colors"
-            aria-label="Twitter"
+            className="hover:text-blue-500 transition-colors"
           >
-            <FaTwitter size={24} />
+            <FaLinkedinIn size={24} />
           </a>
           <a
-            href="mailto:example@gmail.com"
-            className="text-gray-400 hover:text-red-500 transition-colors"
-            aria-label="Email"
+            href="mailto:theofficialayush,kumar@gmail.com"
+            className="hover:text-red-500 transition-colors"
           >
             <FaEnvelope size={24} />
           </a>

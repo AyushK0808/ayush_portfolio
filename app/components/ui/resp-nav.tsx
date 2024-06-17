@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { FaGithub, FaInstagram, FaTwitter, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaTwitter, FaEnvelope, FaBars, FaTimes, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -20,17 +20,17 @@ const MainNavbar = () => {
         
         {/* Desktop View */}
         <div className="hidden md:flex justify-center w-full space-x-6">
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
           <a
-            href="https://github.com"
+            href="https://github.com/AyushK0808"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue transition-colors"
+            className="hover:text-blue-800 transition-colors"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_ayush.0808?igsh=MXZuN2x5dWg1OXF3Ng=="
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition-colors"
@@ -38,15 +38,15 @@ const MainNavbar = () => {
             <FaInstagram size={24} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/ayush-kumar-061a58251/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-colors"
           >
-            <FaTwitter size={24} />
+            <FaLinkedinIn size={24} />
           </a>
           <a
-            href="mailto:example@gmail.com"
+            href="mailto:theofficialayush,kumar@gmail.com"
             className="hover:text-red-500 transition-colors"
           >
             <FaEnvelope size={24} />
@@ -95,15 +95,15 @@ const MainNavbar = () => {
         </div>
         <div className="flex space-x-4 mt-4 justify-center">
           <a
-            href="https://github.com"
+            href="https://github.com/AyushK0808"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-500 transition-colors"
+            className="hover:text-blue-800 transition-colors"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_ayush.0808?igsh=MXZuN2x5dWg1OXF3Ng=="
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition-colors"
@@ -111,15 +111,15 @@ const MainNavbar = () => {
             <FaInstagram size={24} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/ayush-kumar-061a58251/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-colors"
           >
-            <FaTwitter size={24} />
+            <FaLinkedinIn size={24} />
           </a>
           <a
-            href="mailto:example@gmail.com"
+            href="mailto:theofficialayush,kumar@gmail.com"
             className="hover:text-red-500 transition-colors"
           >
             <FaEnvelope size={24} />

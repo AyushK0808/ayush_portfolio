@@ -58,7 +58,7 @@ const educationData = [
     from: '2022',
     to: '2026(expected)',
     grade: '9.2 CGPA (upto 4th semester)',
-    details: 'Completed Bachelor of Technology in Computer Science with a focus on Software Development and Machine Learning.'
+    details: 'Currently in Third Year of Bachelors of Technology in Computer Science with a focus on Software Development and Machine Learning.'
   }
 ];
 
@@ -76,7 +76,7 @@ const Education: React.FC = () => {
         <motion.div 
          style={{scaleY: scrollYProgress}}
         
-        className='absolute left-9 top-0 w-[4px] h-full bg-white origin-top '/>
+        className='absolute left-9 top-0 w-[4px] h-full bg-gradient-to-b from-purple-200 to-purple-700 origin-top '/>
           <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {educationData.map((edu, index) => (
             <Details
