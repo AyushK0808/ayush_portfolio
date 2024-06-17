@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { FaGithub, FaInstagram, FaTwitter, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
+import ThemeSwitcher from './ThemeSwitcher';
+
 
 const MainNavbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,8 +17,10 @@ const MainNavbar = () => {
   return (
     <nav className="fixed md:relative top-0 left-0 w-full bg-primary shadow-md z-50">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+        
         {/* Desktop View */}
         <div className="hidden md:flex justify-center w-full space-x-6">
+          <ThemeSwitcher />
           <a
             href="https://github.com"
             target="_blank"

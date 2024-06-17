@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.4.2",
     "@react-three/drei": "^9.107.0",
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.5.0",
@@ -16,6 +17,7 @@
     "framer-motion": "^11.2.10",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",

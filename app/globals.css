@@ -26,6 +26,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+[data-theme="light"] body {
+  background-color: #fff;
+  color: #000;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
