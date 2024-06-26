@@ -91,7 +91,7 @@ const MainNavbar = () => {
             <a href="#experience" className='hover:font-bold'>Experience</a>
             <a href="#education" className='hover:font-bold'>Education</a>
             <a href="#contactme" className='hover:font-bold'>Get in Touch</a>
-            <a href="/" className='text-purple-500 hover:font-bold'>Resume Link</a>
+            <a href="https://drive.google.com/file/d/1geKMl9g5HbgejpW-CllJc_8cnVSP0vG6/view?usp=sharing" className='text-purple-500 hover:font-bold'>Resume Link</a>
           </div>
         </div>
         <div className="flex space-x-4 mt-4 justify-center">
