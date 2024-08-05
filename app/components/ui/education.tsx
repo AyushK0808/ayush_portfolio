@@ -17,7 +17,7 @@ interface DetailsProps {
 const Details: React.FC<DetailsProps> = ({ std, institute, from, to, grade, details }) => {
   const ref= useRef(null);
   return (
-    <li ref={ref} className='my-8 first: mt-0 last: mb-0 w-[60%] mx-auto flex flex-col items-center justify-betweeen'>
+    <li ref={ref} className='my-8 first: mt-0 last: mb-0 w-[60%] mx-auto flex flex-col justify-betweeen'>
       <Li_Icon/>
       <motion.div
       initial={{y:50}}

@@ -38,8 +38,8 @@ const cardContents: CardContent[] = [
 
 const Card = ({ content }: { content: CardContent }) => {
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[25rem] h-auto rounded-xl p-6 border m-auto">
+    <CardContainer className="inter-var py-10">
+      <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[25rem] h-[32rem] rounded-xl p-6 border m-auto">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-white"
@@ -49,7 +49,8 @@ const Card = ({ content }: { content: CardContent }) => {
         <CardItem
           as="p"
           translateZ="60"
-          className=" text-sm max-w-sm mt-2 text-neutral-300"
+          className="text-sm max-w-sm mt-2 text-neutral-300 overflow-hidden text-ellipsis"
+          style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 8 }}
         >
           {content.description}
         </CardItem>
@@ -58,11 +59,11 @@ const Card = ({ content }: { content: CardContent }) => {
             src={content.imgsrc}
             height="1000"
             width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="flex justify-between items-center mt-4">
           <CardItem
             translateZ={20}
             as={Link}
@@ -72,13 +73,6 @@ const Card = ({ content }: { content: CardContent }) => {
           >
             {content.buttonText}
           </CardItem>
-          {/* <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem> */}
         </div>
       </CardBody>
     </CardContainer>

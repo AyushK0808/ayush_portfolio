@@ -224,7 +224,7 @@ export default function Home() {
       <div id ='contactme'>
          <SectionHeading title="Get in Touch" />
       {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
-      <div className="max-w-full mx-auto mb-8">
+      <div className="max-w-2/3 mx-auto mb-8">
         <WorldForm />
       </div>
       </div>
