@@ -73,7 +73,7 @@ const MainNavbar = () => {
           </a>
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/12gxwBc7XgQCJGNyHAzzkkqsjnKNHek7O/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1krIATOATsOrsDjaJSBzAyvYj_lU_LRv5/view"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 px-4 rounded-full hover:scale-105 hover:shadow-lg transition-all font-medium"
@@ -144,7 +144,7 @@ const MainNavbar = () => {
             </a>
             {/* Resume Button */}
             <a
-              href="https://drive.google.com/file/d/12gxwBc7XgQCJGNyHAzzkkqsjnKNHek7O/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1krIATOATsOrsDjaJSBzAyvYj_lU_LRv5/view"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 w-full text-center bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-full hover:scale-105 hover:shadow-lg transition-all font-medium"

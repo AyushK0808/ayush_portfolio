@@ -72,7 +72,7 @@ export const Navbar = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <Link href="https://drive.google.com/file/d/12gxwBc7XgQCJGNyHAzzkkqsjnKNHek7O/view?usp=drive_link">
+        <Link href="https://drive.google.com/file/d/1krIATOATsOrsDjaJSBzAyvYj_lU_LRv5/view">
         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Resume Link</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-purple-500 to-transparent  h-px" />
