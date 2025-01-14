@@ -180,7 +180,7 @@ const MainNavbar = () => {
               <FaLinkedinIn size={24} />
             </a>
             <a
-              href="mailto:theofficialayush,kumar@gmail.com"
+              href="mailto:theofficialayush.kumar@gmail.com"
               className="text-white hover:text-red-500 transition-all"
             >
               <FaEnvelope size={24} />

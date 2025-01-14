@@ -1,44 +1,43 @@
 "use client";
 
 import React, { useState } from "react";
+import PopupCard from "./PopUpCard";
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<string | null>(null); // For success or error message
+  const [popup, setPopup] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const formData = {
-      name,
-      email,
-      message,
-    };
+    setLoading(true); // Start loading state
+
+    const formData = { name, email, message };
 
     try {
       const res = await fetch("api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        setStatus("Message sent successfully!");
-        setName(""); // Clear the form fields
+        setPopup({ message: "Message sent successfully!", type: "success" });
+        setName("");
         setEmail("");
         setMessage("");
       } else {
-        setStatus(`Error: ${data.error || "Something went wrong!"}`);
+        setPopup({ message: `Error: ${data.error || "Something went wrong!"}`, type: "error" });
       }
     } catch (error) {
-      setStatus("Error: Unable to send message. Please try again later.");
+      setPopup({ message: "Error: Unable to send message. Please try again later.", type: "error" });
       console.error("Form submission error:", error);
+    } finally {
+      setLoading(false); // Stop loading state
     }
   };
 
@@ -85,17 +84,20 @@ const ContactForm: React.FC = () => {
 
         <button
           type="submit"
-          className="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded focus:outline-none"
+          className="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded focus:outline-none disabled:bg-gray-500 disabled:cursor-not-allowed"
+          disabled={loading} // Disable the button while loading
         >
-          Send
+          {loading ? "Sending..." : "Send"}
         </button>
       </form>
 
-      {/* Display status message */}
-      {status && (
-        <div className={`mt-4 text-center ${status.startsWith("Error") ? "text-red-500" : "text-green-500"}`}>
-          {status}
-        </div>
+      {/* Popup for status */}
+      {popup && (
+        <PopupCard
+          message={popup.message}
+          type={popup.type}
+          onClose={() => setPopup(null)}
+        />
       )}
     </div>
   );
