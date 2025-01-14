@@ -5,8 +5,8 @@ import { WebGLRendererConfig , World} from './globe';
 import ContactForm from './form';
 
 interface WorldWithContactFormProps {
-  globeConfig: any; // Adjust the type based on WebGLRendererConfig type definition
-  data: any; // Adjust the type based on the actual type of 'data' if known
+  globeConfig: any; 
+  data: any;
 }
 
 const globeConfig = {

@@ -57,7 +57,7 @@ const educationData = [
     institute: 'Vellore Institute of Technology, Vellore, Tamil Nadu',
     from: '2022',
     to: '2026(expected)',
-    grade: '9.2 CGPA (upto 4th semester)',
+    grade: '9.25 CGPA (upto 5th semester)',
     details: 'Currently in Third Year of Bachelors of Technology in Computer Science with a focus on Software Development and Machine Learning.'
   }
 ];

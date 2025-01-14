@@ -25,11 +25,9 @@ import MainNavbar from './components/ui/resp-nav';
 import { Navbar } from './components/ui/navbar';
 import Profile from './components/ui/profile';
 
-// Dynamic imports
-// const MainNavbar = dynamic(() => import('./components/ui/resp-nav'), { ssr: false });
-// const Navbar = dynamic(() => import(''), { ssr: false });
+
 const WorldForm = dynamic(() => import('./components/ui/globe-form'), { ssr: false });
-// const World = dynamic(() => import('./components/ui/globe'), { ssr: false });
+
 
 const navItems = [
   { name: "Home", link: "#home" },
@@ -47,10 +45,10 @@ const typewriterWords = [
 
 const skills = {
   frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "Framer", "Bootstrap", "Tailwind CSS", "ReactJS"],
-  backend: ["NextJS", "MongoDB", "mySQL", "Postgres", "Django", "Express JS", "Flask", "Node JS", "Go", "Rust", "Docker", "Postman API", "Prisma"],
+  backend: ["NextJS", "MongoDB", "mySQL", "Postgres", "Django", "Express JS", "Flask", "Node JS","Postman API", "Prisma"],
   machineLearning: ["TensorFlow", "Keras", "scikitlearn", "OpenCV", "numpy", "pandas", "pytorch"],
   programmingLanguages: ["C", "C++", "Java", "Python", "R"],
-  others: ["Canva", "Figma", "Flutter", "React Native", "Arduino", "Linux"],
+  others: ["Canva", "Figma", "Arduino", "Linux"],
 };
 
 const skillColors: { [key: string]: string } = {
@@ -70,9 +68,9 @@ const skillColors: { [key: string]: string } = {
   "Express JS": "#000000",
   Flask: "#000000",
   "Node JS": "#339933",
-  Go: "#00ADD8",
-  Rust: "#DEA584",
-  Docker: "#2496ED",
+  // Go: "#00ADD8",
+  // Rust: "#DEA584",
+  // Docker: "#2496ED",
   "Postman API": "#FF6C37",
   Prisma: "#0C344B",
   TensorFlow: "#FF6F00",
@@ -89,8 +87,8 @@ const skillColors: { [key: string]: string } = {
   R: "#276DC3",
   Canva: "#00C4CC",
   Figma: "#F24E1E",
-  Flutter: "#02569B",
-  "React Native": "#61DAFB",
+  // Flutter: "#02569B",
+  // "React Native": "#61DAFB",
   Arduino: "#00979D",
   Linux: "#FCC624",
 };
@@ -166,7 +164,7 @@ export default function Home() {
   return (
     <div>
       <MainNavbar />
-      <Navbar navItems={navItems} className="hidden md:flex" />
+      {/* <Navbar navItems={navItems} className="hidden md:flex" /> */}
       <div id='home'>
         <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="text-6xl font-bold text-center text-white">
@@ -223,7 +221,6 @@ export default function Home() {
       </div>
       <div id ='contactme'>
          <SectionHeading title="Get in Touch" />
-      {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
       <div className="max-w-2/3 mx-auto mb-8">
         <WorldForm />
       </div>
