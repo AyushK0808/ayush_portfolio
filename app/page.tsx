@@ -14,30 +14,20 @@ import {
 } from "@tabler/icons-react";
 import { BentoGrid, BentoGridItem } from "./components/ui/bento-grid";
 import SectionHeading from "./components/ui/heading";
-import { LayoutGrid } from "./components/ui/layout-grid";
-import { CardBody, CardContainer, CardItem } from "./components/ui/3d-card";
-import Link from "next/link";
 import CardList from "./components/ui/card-list";
 import Education from "./components/ui/education";
 import Experience from "./components/ui/experience";
 import Footer from "./components/ui/footer";
 import MainNavbar from './components/ui/resp-nav';
-import { Navbar } from './components/ui/navbar';
 import Profile from './components/ui/profile';
+import FloatingButtons from './components/ui/floating-buttons';
+import OtherExperience from './components/ui/misc-exp';
 
 
 const WorldForm = dynamic(() => import('./components/ui/globe-form'), { ssr: false });
 
 
-const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "About Me", link: "#aboutme" },
-  { name: "My Skills", link: "#skills" },
-  { name: "My Projects", link: "#projects" },
-  { name: "Experience", link: "#experience" },
-  { name: "Education", link: "#education" },
-  { name: "Get in touch", link: "#contactme" }
-];
+
 
 const typewriterWords = [
   { text: "Machine Learning & Web Development" },
@@ -167,19 +157,21 @@ export default function Home() {
       {/* <Navbar navItems={navItems} className="hidden md:flex" /> */}
       <div id='home'>
         <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
-        <h1 className="text-6xl font-bold text-center text-white">
+        <h1 className="z-[-1] text-6xl font-bold text-center text-white">
           Hello There
         </h1>
         <br />
-        <p className="text-2xl text-center text-gray-300">
+        <p className="z-[-1] text-2xl text-center text-gray-300">
           I am <Highlight>Ayush Kumar</Highlight>
         </p>
         <TypewriterEffectSmooth
           words={typewriterWords}
-          className="mb-8 bg-transparent text-center"
+          className="z-[-1] mb-8 bg-transparent text-center"
           cursorClassName="bg-blue-600"
         />
+        {/* <FloatingButtons/> */}
       </HeroHighlight>
+      
       </div>
       
       <br />
@@ -212,8 +204,10 @@ export default function Home() {
       
       <br />
       <div id='experience'>
-      <SectionHeading title="Experience" />
+      <SectionHeading title="Work Experience" />
       <Experience />
+      <SectionHeading title="Other Technical Experiences" />
+      <OtherExperience />
       </div>
       <div id ='education'>
         <SectionHeading title="Education" />

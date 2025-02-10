@@ -37,15 +37,32 @@ const Details: React.FC<DetailsProps> = ({ std, institute, from, to, details }) 
 
 const empData = [
   {
-    std: 'Algorithm Intern',
-    institute: 'Titan Smart Labs - Hyderabad',
-    from: 'June 2024',
-    to: 'Present',
-    details: 'Worked on data collection and preprocessing. Additionally, worked in the development of algorithms to classify sleep and stress on a product launched by the company commercially. '
+    std: 'Under Secretary General - Technology',
+    institute: 'VIT Model United Nations Society- Vellore',
+    from: 'January 2024',
+    to: "April 2024",
+    
+    details: 'As the Under Secretary General - Technology for VITMUN 24, I was incharge of handling the technical aspects of the conference such as making the website for the event. Additionally, I was an active member in the Registrations department which helped in making the event a grand success'
+  },
+  {
+    std: 'Core Committee Member',
+    institute: 'VInnovateIT -VIT Vellore',
+    from: 'May 2023',
+    to: '',
+    
+    details: 'Active member in both the technical domain(ML,Web,cc) and management.Assisted in promotion drives of apps such as MessIT with more than 10,000concurrent users Contributed to multiple projects involving Generative AI andfull stack development'
+  },
+  {
+    std: 'Software Lead',
+    institute: 'Team Ardra: VIT Vellore',
+    from: 'May 2023',
+    to: '',
+    
+    details: 'Actively helped in outreach activities and worked on machine learning tasks to automate drone functionalities.'
   }
 ];
 
-const Experience: React.FC = () => {
+const OtherExperience: React.FC = () => {
   const ref = React.useRef(null);
   const {scrollYProgress} = useScroll(
     {
@@ -79,4 +96,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default OtherExperience;

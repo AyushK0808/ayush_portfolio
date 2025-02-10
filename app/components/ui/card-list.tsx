@@ -16,8 +16,8 @@ const cardContents: CardContent[] = [
     title: "ISDC 2024 Winning Team Project",
     description: "Assisted in making the software for the drone team that won ISDC 2024. Worked on the object detection via images taken by the onboard the drone using YOLO object detection model. Also worked on a path planning algorithm(A* search algorithm) which gave a path which avoided allobstacles in the image while at the same time passing all the waypoints",
     imgsrc:"/obj_dec.png",
-    link: "https://github.com/TeamArdra/isdc-2024",
-    buttonText: "Check it Out ->",
+    link: "",
+    buttonText: "",
   },
   {
     title: "TuneCraft",
@@ -38,8 +38,8 @@ const cardContents: CardContent[] = [
 
 const Card = ({ content }: { content: CardContent }) => {
   return (
-    <CardContainer className="inter-var py-10">
-      <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[25rem] h-[32rem] rounded-xl p-6 border m-auto">
+    <CardContainer className="inter-var py-2 md:py-4"> {/* Reduced vertical padding */}
+      <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[25rem] h-[32rem] rounded-xl p-4 border m-auto">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-white"
@@ -49,7 +49,7 @@ const Card = ({ content }: { content: CardContent }) => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-sm max-w-sm mt-2 text-neutral-300 overflow-hidden text-ellipsis"
+          className="text-sm max-w-sm mt-[1rem] md:mt-2 text-neutral-300 overflow-hidden text-ellipsis"
           style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 8 }}
         >
           {content.description}
@@ -81,7 +81,7 @@ const Card = ({ content }: { content: CardContent }) => {
 
 const CardList = () => {
   return (
-    <div className="flex flex-wrap gap-6 justify-center">
+    <div className="flex flex-wrap justify-center gap-3 md:gap-4"> {/* Reduced gap */}
       {cardContents.map((content, index) => (
         <Card key={index} content={content} />
       ))}
