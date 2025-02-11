@@ -206,7 +206,7 @@ export default function Home() {
       <div id='experience'>
       <SectionHeading title="Work Experience" />
       <Experience />
-      <SectionHeading title="Other Technical Experiences" />
+      <SectionHeading title="Key Roles" />
       <OtherExperience />
       </div>
       <div id ='education'>

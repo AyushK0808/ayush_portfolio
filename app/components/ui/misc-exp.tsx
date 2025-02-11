@@ -48,17 +48,17 @@ const empData = [
     std: 'Core Committee Member',
     institute: 'VInnovateIT -VIT Vellore',
     from: 'May 2023',
-    to: '',
+    to: 'Present',
     
-    details: 'Active member in both the technical domain(ML,Web,cc) and management.Assisted in promotion drives of apps such as MessIT with more than 10,000concurrent users Contributed to multiple projects involving Generative AI andfull stack development'
+    details: 'Active member in the technical (ML,Web,cc) and management domains. Assisted in promotion drives of apps such as MessIT with more than 10,000 concurrent users. Contributed to multiple projects involving Generative AI and full stack development'
   },
   {
     std: 'Software Lead',
     institute: 'Team Ardra: VIT Vellore',
     from: 'May 2023',
-    to: '',
+    to: 'Present',
     
-    details: 'Actively helped in outreach activities and worked on machine learning tasks to automate drone functionalities.'
+    details: 'Developed object detection and path planning systems using YOLOv8 and A* Algorithm for ISDC 2024, led the software domain for ISDC 2025, and contributed to recruitment and team promotions at StarParty event in GraVITas 2024'
   }
 ];
 

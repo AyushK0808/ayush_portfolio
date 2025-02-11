@@ -37,11 +37,25 @@ const Details: React.FC<DetailsProps> = ({ std, institute, from, to, details }) 
 
 const empData = [
   {
+    std: 'Research Intern - Samsung Prism',
+    institute: 'Samsung R&D Institute Bengaluru',
+    from: 'Sept 2024',
+    to: 'Present',
+    details: 'Implemented advanced projects in Machine Learning and Generative AI, focusing on innovative solutions like Auto Campaign Segmentation, which streamline marketing campaigns by automating segmentation using AI-driven insights.'
+  },
+  {
     std: 'Algorithm Intern',
     institute: 'Titan Smart Labs - Hyderabad',
     from: 'June 2024',
-    to: 'Present',
+    to: 'Aug 2024',
     details: 'Worked on data collection and preprocessing. Additionally, worked in the development of algorithms to classify sleep and stress on a product launched by the company commercially. '
+  },
+  {
+    std: 'Intern',
+    institute: 'Aspecto AI- Hyderabad',
+    from: 'June 2024',
+    to: 'Present',
+    details: 'Developed expertise in Object Detection and Image Processing by contributing to cutting-edge projects involving real-world applications.'
   }
 ];
 

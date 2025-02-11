@@ -36,15 +36,4 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   );
 };
 
-// Usage example
-// import { SectionHeading } from './components/ui/SectionHeading';
-
-// function HomePage() {
-//   return (
-//     <div>
-//       <SectionHeading title="My Section Title" />
-//     </div>
-//   );
-// }
-
 export default SectionHeading;
