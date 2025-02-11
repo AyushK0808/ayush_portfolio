@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Text */}
-        <p className="text-center md:text-left">© 2024 Ayush Kumar. All rights reserved.</p>
+        <p className="text-center md:text-left">© 2025 Ayush Kumar. All rights reserved.</p>
       </div>
     </footer>
   );

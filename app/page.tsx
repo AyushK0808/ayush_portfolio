@@ -35,7 +35,7 @@ const typewriterWords = [
 
 const skills = {
   frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "Framer", "Bootstrap", "Tailwind CSS", "ReactJS"],
-  backend: ["NextJS", "MongoDB", "mySQL", "Postgres", "Django", "Express JS", "Flask", "Node JS","Postman API", "Prisma"],
+  backend: ["NextJS", "MongoDB", "mySQL", "Postgres", "Django", "Express JS", "Flask", "Node JS","Postman API", "Prisma","Golang","Rust","Docker"],
   machineLearning: ["TensorFlow", "Keras", "scikitlearn", "OpenCV", "numpy", "pandas", "pytorch"],
   programmingLanguages: ["C", "C++", "Java", "Python", "R"],
   others: ["Canva", "Figma", "Arduino", "Linux"],
@@ -58,9 +58,9 @@ const skillColors: { [key: string]: string } = {
   "Express JS": "#000000",
   Flask: "#000000",
   "Node JS": "#339933",
-  // Go: "#00ADD8",
-  // Rust: "#DEA584",
-  // Docker: "#2496ED",
+  Go: "#00ADD8",
+  Rust: "#DEA584",
+  Docker: "#2496ED",
   "Postman API": "#FF6C37",
   Prisma: "#0C344B",
   TensorFlow: "#FF6F00",

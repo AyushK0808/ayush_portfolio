@@ -7,8 +7,10 @@ type CardContent = {
   title: string;
   description: string;
   link: string;
+  link2:string;
   imgsrc: string;
   buttonText: string;
+  buttonText2: string;
 };
 
 const cardContents: CardContent[] = [
@@ -18,6 +20,26 @@ const cardContents: CardContent[] = [
     imgsrc:"/obj_dec.png",
     link: "",
     buttonText: "",
+    link2: "",
+    buttonText2: "",
+  },
+  {
+    title: "VITMUN 2025 Website",
+    description: "Designed, developed, and deployed the VITMUN 2025 website, serving 1,000+ users. Built with Next.js for a seamless and responsive experience, featuring event details, delegate registration, and real-time updates. Containerized with Docker and deployed on a VM for scalability and reliability.",
+    imgsrc: "/vitmun.png",
+    link: "https://vitmun-25.vercel.app/",
+    buttonText: "Explore →",
+    link2: "",
+    buttonText2: "",
+  },
+  {
+    title: "Component Service Predictor",
+    description: "Developed an LSTM model with 82% accuracy for predicting equipment failures, enabling proactive maintenance and reducing downtime. Built a ReactJS web interface for seamless interaction, integrated automated reports and service reminders to streamline maintenance, and created a chatbot for quick issue reporting, cutting response times and improving resource utilization by 75%.",
+    imgsrc: "/comp_serv.png",
+    link: "https://component-sevice-predictor.vercel.app/",
+    buttonText: "Website Link →",
+    link2: "https://github.com/AyushK0808/Component_Sevice_Predictor",
+    buttonText2: "Github Link →",
   },
   {
     title: "TuneCraft",
@@ -25,6 +47,26 @@ const cardContents: CardContent[] = [
     imgsrc: "/tunecraft.png",
     link: "https://fishtank-vinnovateit.vercel.app/",
     buttonText: "Check it out →",
+    link2: "https://github.com/AyushK0808/fishtank-vinnovateit",
+    buttonText2: "GitHub Link →",
+  },
+  {
+    title: "Schedule Allocation and Planning System(SAPS)",
+    description: "A Python application developed for the Ladies Hostel of VIT Vellore to manage the scheduling of wardens based on shifts and off days. Used tkinter for frontend and also implemented a mailer to send the schedules to the Chief Warden on a monthly basis.",
+    imgsrc: "/saps_pic.jpg",
+    link: "",
+    buttonText: "",
+    link2: "",
+    buttonText2: "",
+  },
+  {
+    title: "QuillSync",
+    description: "The self-hostable notes and research assistant helps organize notes and source references privately. It uses Llama 3.2 with RAG for structuring notes and SearXNG for meta-search. Users can collaborate in workspaces, making it ideal for research. Fully self-hostable with no third-party dependencies, it ensures data control and easy integration. Requires Docker, Python 3.10+, and Node.js.",
+    imgsrc: "/white.png",
+    link: "https://github.com/AyushK0808/QuillSync",
+    buttonText: "Explore →",
+    link2: "",
+    buttonText2: "",
   },
   {
     title: "Schedule Generator for Women coming back to work",
@@ -32,7 +74,23 @@ const cardContents: CardContent[] = [
     imgsrc: "/maafia.png",
     link: "https://github.com/AyushK0808/MAA-FIA",
     buttonText: "Explore →",
+    link2: "",
+    buttonText2: "",
   },
+  
+  
+  
+  {
+    title: "AI Character Chatbot",
+    description: "A Chat application where the user can interact with their favorite characters or people as if they were talking to them. Uses NextJS for the framework and MongoDB for the database. Uses GPT to generate AI conversations. ",
+    imgsrc: "/white.png",
+    link: "",
+    buttonText: "",
+    link2: "",
+    buttonText2: "",
+  },
+  
+
   // Add more card contents as needed
 ];
 
@@ -72,6 +130,17 @@ const Card = ({ content }: { content: CardContent }) => {
             className="px-4 py-2 rounded-xl text-xs font-normal text-white"
           >
             {content.buttonText}
+          </CardItem>
+        </div>
+        <div className="flex justify-between items-center mt-4">
+          <CardItem
+            translateZ={20}
+            as={Link}
+            href={content.link2}
+            target="__blank"
+            className="px-4 py-2 rounded-xl text-xs font-normal text-white"
+          >
+            {content.buttonText2}
           </CardItem>
         </div>
       </CardBody>
