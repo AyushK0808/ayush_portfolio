@@ -31,13 +31,14 @@ const Profile = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-lg leading-relaxed">
-            Hello There! I am <Highlight>Ayush Kumar</Highlight>, currently studying Computer Science at Vellore Institute of Technology, Vellore. My world revolves around problem-solving, with a keen focus on web development and machine learning.
-            <br /><br />
-            <Highlight>Fun fact:</Highlight> Beyond the tech realm, I enjoy exploring new cuisines and am always eager to learn new things. Just like a Jedi mastering the Force, I am committed to continuous learning and improving my skills.
-            <br /><br />
-            Additionally, I have a flair for designing applications and value effective collaboration. Excited about the dynamic field of technology, I am dedicated to continuous learning and collaborating on interesting projects.
-          </p>
+         <p className="text-lg leading-relaxed">
+  Hello there! I am <Highlight>Ayush Kumar</Highlight>, a Computer Science student at Vellore Institute of Technology, Vellore. I am passionate about problem-solving, with a strong focus on web development and machine learning. I love building dynamic, user-friendly websites and exploring AI-driven solutions to real-world problems.  
+  <br /><br />
+  Beyond coding, I enjoy capturing stories through photography and discovering new cuisines. I also have a flair for designing applications and value effective collaboration in tech-driven projects.  
+  <br /><br />
+  Always eager to learn and innovate, I strive to push my limits and contribute to meaningful projects in the ever-evolving world of technology.
+</p>
+
         </motion.div>
       </motion.div>
     </div>

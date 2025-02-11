@@ -66,3 +66,39 @@ body {
   background-size: 200% 200%;
   animation: gradient-pulse 3s ease infinite;
 }
+
+/* Custom Purple Scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Default for larger screens */
+}
+
+/* Scrollbar for Mobile Devices */
+@media (max-width: 640px) {  /* Tailwind's sm breakpoint */
+  ::-webkit-scrollbar {
+    width: 5px; /* Thinner scrollbar for mobile */
+  }
+}
+
+/* Scrollbar for Tablets */
+@media (min-width: 641px) and (max-width: 1024px) {  /* Tailwind's md breakpoint */
+  ::-webkit-scrollbar {
+    width: 8px; /* Medium scrollbar for tablets */
+  }
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #1a1a2e; /* Dark background */
+  border-radius: 10px;
+}
+
+/* Scrollbar Thumb (Handle) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a855f7, #7c3aed); /* Purple gradient */
+  border-radius: 10px;
+}
+
+/* Scrollbar Thumb Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9333ea, #6d28d9); /* Brighter on hover */
+}

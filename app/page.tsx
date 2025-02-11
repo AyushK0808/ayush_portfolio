@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Image from "next/image";
-import { motion } from 'framer-motion';
 import { HeroHighlight, Highlight } from "./components/ui/hero";
 import { TypewriterEffectSmooth } from "./components/ui/typewriter";
 import {
@@ -158,16 +156,16 @@ export default function Home() {
       <div id='home'>
         <HeroHighlight containerClassName="custom-hero-container" className="custom-hero-class">
         <h1 className="z-[-1] text-6xl font-bold text-center text-white">
-          Hello There
+          Hello There !
         </h1>
         <br />
-        <p className="z-[-1] text-2xl text-center text-gray-300">
+        <p className="z-[-1] text-2xl font-bold text-center text-gray-300">
           I am <Highlight>Ayush Kumar</Highlight>
         </p>
         <TypewriterEffectSmooth
           words={typewriterWords}
           className="z-[-1] mb-8 bg-transparent text-center"
-          cursorClassName="bg-blue-600"
+          cursorClassName="bg-purple-600"
         />
         {/* <FloatingButtons/> */}
       </HeroHighlight>
@@ -206,9 +204,13 @@ export default function Home() {
       <div id='experience'>
       <SectionHeading title="Work Experience" />
       <Experience />
-      <SectionHeading title="Key Roles" />
+      </div>
+      <div id='keyroles'>
+        <SectionHeading title="Key Roles" />
       <OtherExperience />
       </div>
+      
+      
       <div id ='education'>
         <SectionHeading title="Education" />
       <Education />
